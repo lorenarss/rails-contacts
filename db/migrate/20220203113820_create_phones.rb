@@ -7,5 +7,6 @@ class CreatePhones < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    add_index :phones, [:number, :contact_id], unique: true
   end
 end
